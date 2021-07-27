@@ -1,0 +1,32 @@
+
+#!/bin/bash -x
+
+ read -p "enter a number between 1 to 5 inclusive > " character
+ case $character in
+
+    1) echo "you entered one."
+      ;;
+    2) echo "you entered two."
+      ;;
+
+    3) echo "you entered three."
+      ;;
+    4) echo "you entered four."
+      ;;
+    5) echo "you entered five."
+       ;;
+    *) echo " you did not enter a number between 1 to 5."
+
+ esac
+
+
+
+
+
+
+
+
+
+
+
+
