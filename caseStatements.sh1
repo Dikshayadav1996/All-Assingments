@@ -1,0 +1,19 @@
+#!/bin/bash -x
+
+read -p "enter any alphanumeric character ;" CHAR
+
+case $CHAR in
+    [0-9]*)
+       echo "input is a digit"
+       ;;
+
+      [a-z]*|[A-Z]*)Z
+          echo "input is a character!"
+       ;;
+       *)
+          echo "input is a non alphanumeric charater"
+       ;;
+
+  esac
+ done
+
