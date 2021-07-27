@@ -1,0 +1,25 @@
+
+
+
+
+
+
+#!/bin/bash -x
+
+echo "enter a units"
+
+read n
+
+case $n in
+1)echo "one" ;;
+2)echo "two" ;;
+3)echo "three" ;;
+4)echo "four" ;;
+5)echo "five" ;;
+6)echo "six" ;;
+*)
+
+   echo "enter value between 1 to 7"
+ ;;
+
+ esac
