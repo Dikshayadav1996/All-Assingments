@@ -1,0 +1,29 @@
+#!/bin/bash -x
+
+echo "*** converting bet the different temp scales***"
+echo "1. convert celsius temp into fahrenheit"
+echo "2. convert fahrenheit temp intocelsius"
+echo -n "select your choice (1-2) ;"
+read choice
+
+if [ $choice -eq 1 ]
+then
+   echo -n "enter temp (c) : "
+   read tc
+   #formula if=(9/5) * $tc) + 32" |bc)
+    if=$(echo "scale=2;((9/5) * $tc) + 32" |bc)
+    echo "$tc c = $tf f"
+
+elif [ $choice -eq 2 ]
+then
+    echo -n "enter temperature (f) : "
+    read tf
+        # formal Tc=(5/9)*(tf-32)
+    tc=$(echo"scale=2;(5/9)*($tf-32)"|bc)
+     echo "$tf = $tc"
+
+else
+    echo "pleaseselect 1 or 2 only"
+    exit 1
+fi
+
