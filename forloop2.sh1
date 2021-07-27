@@ -18,3 +18,9 @@ a=\`echo $sum | cut -c $i\`
 echo -e \"$a\\c\"
 if [ $i -eq 1 ]
 then
+echo -e \" . \\c\"
+fi
+i=\`expr $i + 1\`
+done
+echo
+
