@@ -1,0 +1,26 @@
+#!/bin/bash -x
+
+arr=(7 7 6 2 1)
+
+if [ "${#array[@]}" -lt 2 ]
+then
+     echo incoming arr is not large enough >&2
+     exit 1
+fi
+
+2ndLargest=${arr[0]}
+2ndSmallest=`unset`
+
+ for((i=1; i < ${#arr[@]}; i++))
+ do
+   if [[ ${arr[i]} > $largest ]]
+    then
+      2ndSmallest=$2ndLargest
+    elif (( ${arr[i]} !=$2ndLargest )) && { [[ "$2ndSmallest" = "unset" ]] || [[ ${arr[i]} > $2ndSmallest ]]; }
+    then
+       2ndSmallest=${arr[i]}
+
+    fi
+ done
+
+ echo "2ndSmallest = $2ndSmallest"
