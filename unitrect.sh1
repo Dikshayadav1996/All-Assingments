@@ -1,0 +1,11 @@
+
+
+#!/bin/bash -x
+
+read -p "enter the width and height of rectangle in meters: " width height
+
+sqm=$(echo "$width * $height" | bc -1)
+sqin=$(echo "$sqm * 1550" | bc -1)
+
+echo "area of the rectangle is : $sqm square meters or $sqin square inches."
+
